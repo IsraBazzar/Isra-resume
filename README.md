@@ -23,7 +23,7 @@ This project is required to complete the requirements Frontend Nanodegree by Uda
 
 ## Resources
 [(Back to top)](#table-of-contents)
--Starter code from Udacity: https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page
+- Starter code from Udacity: https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page
 - Color palette from https://coolors.co
 - Fonts from: https://fonts.google.com/
 - ipsum text from: https://loremipsum.io/generator/?n=1&t=p
