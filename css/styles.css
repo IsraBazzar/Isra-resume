@@ -1,0 +1,298 @@
+
+/* Adding my designs colors and fonts - as in my last project to unify my work  
+/* Color Palette
+Coolors Exported Palette - https://coolors.co/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c
+
+/* CSS HEX 
+--antique-brass: #cb997eff;
+--desert-sand: #ddbea9ff;
+--champagne-pink: #ffe8d6ff;
+--ash-gray: #b7b7a4ff;
+--artichoke: #a5a58dff;
+--ebony: #6b705cff;
+color: rgb(207, 125, 81);
+*/
+
+/*CSS rules to specify families
+
+font-family: 'Lato', sans-serif;
+font-family: 'Oooh Baby', cursive;
+font-family: 'Splash', cursive;*/
+
+/* ---- Base Rules ---- */
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: linear-gradient(-225deg, #cb997eff 0%, #a5a58dff 29%, #6b705cff 67%, rgb(207, 125, 81) 100%);
+    color:#ffe8d6ff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;  
+}
+
+header {
+    color: #6b705cff;
+    padding: 0;
+    margin: 0;
+}
+#intro_header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 5px double rgb(207, 125, 81);
+}
+
+/* Typeography General*/
+h1 {
+    font-family: 'Splash', cursive;
+    margin: 0;
+    font-size: 3em;
+}
+
+h2
+{
+    font-family: 'Oooh Baby', cursive;
+    font-size: 3em;
+}
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+    }
+}
+
+section h2 {
+    border-bottom: 5px dotted rgb(207, 125, 81);
+    font-size: 3em;
+    color: #fff;
+}
+
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+main {
+    margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu ul{
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+.page__footer ul{
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar__menu li, .page__footer li{
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+    background: rgb(207, 125, 81);
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+.active__link {
+    background: #6b705cff;
+    color: #fff;
+}
+.strong_span{
+    font-weight: bold;
+    font-size: 20px;
+}
+#skills_list{
+    list-style: none;
+}
+/* For Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .navbar__menu{
+        font-size: 12px;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(207, 125, 81);
+    font-weight: bold;
+    text-align: center;
+}
+
+footer a {
+    color: #ffe8d6ff;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #6b705cff;
+    border-radius: 0.5em;
+    color: #ffe8d6ff;
+}
+
+footer img {
+    width: 36px;
+    height: 36px;
+}
+
+footer li {
+    display: inline;
+}
+
+.socials {
+    margin-top: 5px;
+}
+
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right; 
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+/* Updating active class */
+section.active__section {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.active__section.landing__container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.active__section.landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
