@@ -79,15 +79,19 @@ createListItem();
  * Added functionality to distinguish the section in view
  * EventListener to scrolling (while scrolling the section in action will be reset)
  */
-document.addEventListener("scroll", function isSectionInViewport() {
-    mainSections.forEach((section) => {
-      if (window.scrollY >= section.offsetHeight) {
-        section.classList.add("active__section");
-      } else {
-        section.classList.remove("active__section");
-      }
-    });
+window.onscroll = function(){
+  document.querySelectorAll("section").forEach(function (active){
+    if(
+      active.getBoundingClientRect().top >= -400 &&
+      active.getBoundingClientRect().top <= 150
+    ){
+    active.classList.add("active__section");
+    }
+    else{
+      active.classList.remove("active__section");
+    }
   });
+}
  
   /**  
    * Build list of links for navigation
